@@ -7,5 +7,6 @@ public class Main {
     timPhone.powerOn();
     timPhone.callPhone(123456);
     timPhone.answer();
+        System.out.println("-".repeat(12));
     }
 }

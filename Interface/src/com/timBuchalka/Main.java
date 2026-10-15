@@ -9,8 +9,12 @@ public class Main {
     timPhone.answer();
         System.out.println("-".repeat(12));
         timPhone=new MobilePhone(24565);
-        timPhone.powerOn();
+//        timPhone.powerOn();
         timPhone.callPhone(24565);
         timPhone.answer();
+
+
+
+
     }
 }

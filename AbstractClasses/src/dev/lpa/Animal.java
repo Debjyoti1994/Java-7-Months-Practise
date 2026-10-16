@@ -3,7 +3,7 @@ package dev.lpa;
 public  abstract class   Animal {
      private String type;
      private String size;
-     private Double weight;
+     private double weight;
 
     public Animal(String type, String size, Double weight) {
         this.type = type;

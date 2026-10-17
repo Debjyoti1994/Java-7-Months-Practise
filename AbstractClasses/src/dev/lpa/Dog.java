@@ -27,8 +27,4 @@ public class Dog extends Animal {
         }
 
     }
-//    @Override
-//    public final String getExplicitType(){
-//        return getClass().getSimpleName()+" ("+type+" )";
-//    }
 }

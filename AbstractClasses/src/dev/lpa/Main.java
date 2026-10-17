@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-//        Animal myAnimal = new Animal("animal", "big", 100);
+//        Animal animals = new Animal("animal", "big", 100);
 Dog dog=new Dog("wolf","big",100);
 dog.makeNoise();
 doAnimalStff(dog);
 
-        ArrayList<Animal>myAnimal=new ArrayList<>();
-        myAnimal.add(dog);
-        myAnimal.add(new Fish("Goldfish","small",46));
-        myAnimal.add(new Dog("goldenetriver","small",46));
-        myAnimal.add(new Dog("Barcuda","big",46));
-        myAnimal.add(new Fish("goldfish","small",46));
-        for (Animal myanimal:myAnimal){
-            doAnimalStff(myanimal);
+        ArrayList<Animal>animals=new ArrayList<>();
+        animals.add(dog);
+        animals.add(new Fish("Goldfish","small",46));
+        animals.add(new Dog("goldenetriver","small",46));
+        animals.add(new Dog("Barcuda","big",46));
+        animals.add(new Fish("goldfish","small",46));
+        for (Animal animal:animals){
+            doAnimalStff(animal);
         }
 
     }

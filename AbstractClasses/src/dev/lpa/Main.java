@@ -7,7 +7,7 @@ public class Main {
 //        Animal animals = new Animal("animal", "big", 100);
 Dog dog=new Dog("wolf","big",100);
 dog.makeNoise();
-doAnimalStff(dog);
+doAnimalStuff(dog);
 
         ArrayList<Animal>animals=new ArrayList<>();
         animals.add(dog);
@@ -16,11 +16,11 @@ doAnimalStff(dog);
         animals.add(new Dog("Barcuda","big",46));
         animals.add(new Fish("goldfish","small",46));
         for (Animal animal:animals){
-            doAnimalStff(animal);
+            doAnimalStuff(animal);
         }
 
     }
- private static void doAnimalStff(Animal animal){
+ private static void doAnimalStuff(Animal animal){
         animal.makeNoise();
         animal.move("Slow");
      System.out.println(".".repeat(12));

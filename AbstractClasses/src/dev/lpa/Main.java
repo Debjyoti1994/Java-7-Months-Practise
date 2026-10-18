@@ -19,6 +19,7 @@ doAnimalStuff(dog);
         for (Animal animal:animals){
             doAnimalStuff(animal);
             if(animal instanceof Mammal currentMamal){
+                //isntance of mamal is currentmamal
                 currentMamal.shedHair();
 
             }

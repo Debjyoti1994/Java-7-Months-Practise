@@ -15,15 +15,21 @@ doAnimalStuff(dog);
         animals.add(new Dog("goldenetriver","small",46));
         animals.add(new Dog("Barcuda","big",46));
         animals.add(new Fish("goldfish","small",46));
+        animals.add(new Horse("Clydesdale","small",20.));
         for (Animal animal:animals){
             doAnimalStuff(animal);
+            if(animal instanceof Mammal currentMamal){
+                currentMamal.shedHair();
+
+            }
+            System.out.println(".".repeat(12));
         }
 
     }
  private static void doAnimalStuff(Animal animal){
         animal.makeNoise();
         animal.move("Slow");
-     System.out.println(".".repeat(12));
+
 
  }
 }

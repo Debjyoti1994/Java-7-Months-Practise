@@ -16,7 +16,23 @@ public class Store {
         for(ProductForSale myp:myProducts){
             myp.showDetails();
         }
+        System.out.println(".".repeat(12));
+        ArrayList<OrderItem>myOrder=new ArrayList<>();
+        addItemToOrder(30,new Drinks(50.00,"Fruti"),myOrder);
+        addItemToOrder(10,new Grocery(400.0,"Poppy Seeds"),myOrder);
+        addItemToOrder(20,new Drinks(50.00,"Fruti"),myOrder);
+        printTheOrderedItem(myOrder);
 
+    }
+    public static void addItemToOrder(int quantity,ProductForSale productForSale,ArrayList<OrderItem>myOrder){
+    myOrder.add(new OrderItem(quantity,productForSale));
+    }
+    public static void printTheOrderedItem(ArrayList<OrderItem>myOrder){
+        for(OrderItem myOrde:myOrder){
+            myOrde.getProductForSale().printPrice(myOrde.getQuantity());
+            myOrde.getProductForSale().showDetails();
+            System.out.println("-".repeat(12));
+        }
 
     }
 }

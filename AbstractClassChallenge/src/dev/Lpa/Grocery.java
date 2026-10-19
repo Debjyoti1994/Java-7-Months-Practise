@@ -8,6 +8,7 @@ public class Grocery extends ProductForSale {
     @Override
     public void showDetails() {
         System.out.println("Product Type:" + getType() + " |" + "Description: " + getDescription() + " |Price: " + getPrice());
+
     }
 
 

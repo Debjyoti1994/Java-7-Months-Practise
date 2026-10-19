@@ -18,4 +18,16 @@ public abstract class  ProductForSale {
                 "₹"+getSalesPrice(quantity));
     }
     public abstract void showDetails();
+
+    public String getType() {
+        return type;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }

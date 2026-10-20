@@ -19,11 +19,12 @@ public class Store {
         addItemOrder(order1,0,1);
         printOrder(order1);
 
-        System.out.println("\nOrder 1");
-        var order1=new ArrayList<OrderItem>();
-        addItemOrder(order1,1,2);
-        addItemOrder(order1,0,1);
-        printOrder(order1);
+        System.out.println("\nOrder 2");
+        var order2=new ArrayList<OrderItem>();
+        addItemOrder(order2,3,5);
+        addItemOrder(order2,0,1);
+        addItemOrder(order2,2,1);
+        printOrder(order2);
 
     }
     public static void listPrducts(){

@@ -2,7 +2,7 @@ package dev.Lpa;
 
 import java.util.ArrayList;
 record OrderItem(int qty,ProductForSale product){}
-
+//Solution by tim
 public class Store {
     private static ArrayList<ProductForSale>storeProducts=new ArrayList<>();
     public static void main(String[] args) {

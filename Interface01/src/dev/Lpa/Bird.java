@@ -5,4 +5,19 @@ public class Bird extends Animal implements FlightEnabled,Trackable{
     public void move() {
         System.out.printf("%12s%n","Flap wings");
     }
+
+    @Override
+    public void takeoff() {
+
+    }
+
+    @Override
+    public void land() {
+
+    }
+
+    @Override
+    public void fly() {
+
+    }
 }

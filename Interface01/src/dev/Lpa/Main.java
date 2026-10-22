@@ -7,7 +7,11 @@ public class Main {
         FlightEnabled flier=bird;
         Trackable tracked=bird;
         animal.move();
-//        flier.move();
-//        tracked.move();
+        flier.fly();
+        flier.land();
+        flier.takeoff();
+        tracked.track();
+
+
     }
 }

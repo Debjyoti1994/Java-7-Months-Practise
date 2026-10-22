@@ -13,8 +13,8 @@ public class Main {
 //        tracked.track();
         inFlight(flier);
         inFlight(new Jet());
-        Truck myTrck=new Truck();
-        myTrck.track();
+        Truck myTruck=new Truck();
+        myTruck.track();
 
 
     }

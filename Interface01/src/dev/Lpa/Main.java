@@ -27,6 +27,8 @@ public class Main {
         fliers.add(bird);
         List<FlightEnabled>betterFliers=new LinkedList<>();
         betterFliers.add(bird);
+//example  of coding to interface....
+        //here list as interface can accept both linked list and array list
 
         triggerFliers(fliers);
         flyFliers(fliers);

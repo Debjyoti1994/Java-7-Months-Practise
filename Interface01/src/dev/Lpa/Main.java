@@ -16,6 +16,9 @@ public class Main {
         Truck myTruck=new Truck();
         myTruck.track();
         //
+        double kmTravelled=100;
+        double milesTraveled=kmTravelled*FlightEnabled.KM_TO_MILES;
+        System.out.printf("The truck traveled %.2f km or %.2f miles%n",kmTravelled,milesTraveled);
 
 
     }

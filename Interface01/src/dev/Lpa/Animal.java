@@ -70,12 +70,12 @@ interface FlightEnabled {
     void land();
 
     void fly();
-
+//Addded later
     default FlightStages transition(FlightStages stage) {
 //    System.out.println(" transition not implemented on"+getClass().getSimpleName());
 //    return null;
         FlightStages nextStage = stage.getNextStages();
-        System.out.println("Transitioning from" + stage + " to " + nextStage);
+        System.out.println("Transitioning from " + stage + " to " + nextStage);
         return nextStage;
     }
 

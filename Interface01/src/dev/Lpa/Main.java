@@ -25,7 +25,7 @@ public class Main {
         System.out.printf("The truck traveled %.2f km or %.2f miles%n",kmTravelled,milesTraveled);
         LinkedList<FlightEnabled> fliers=new LinkedList<>();
         fliers.add(bird);
-        List<FlightEnabled>betterFliers=new LinkedList<>();
+        ArrayList<FlightEnabled>betterFliers=new ArrayList<>();
         betterFliers.add(bird);
 //example  of coding to interface....
         //here list as interface can accept both linked list and array list

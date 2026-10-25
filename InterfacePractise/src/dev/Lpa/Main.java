@@ -12,5 +12,11 @@ public class Main {
         animal.move();
 //        flier.move();
 //        tracked.move();
+        flier.takeOff();
+        flier.fly();
+        tracked.track();
+        flier.land();
+
+
     }
 }

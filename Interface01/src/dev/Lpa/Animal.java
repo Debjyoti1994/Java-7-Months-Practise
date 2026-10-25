@@ -36,8 +36,8 @@ record DragonFly(String name, String type) implements FlightEnabled {
     }
 }
 
-class satellite implements OrbitEarth {
-    public void achiveOrbit() {
+class Satellite implements OrbitEarth {
+    public void achieveOrbit() {
         System.out.println("Orbit has been reached");
     }
 
@@ -58,7 +58,11 @@ class satellite implements OrbitEarth {
 }
 
 interface OrbitEarth extends FlightEnabled {
-    void achiveOrbit();
+    void achieveOrbit();
+    static void log(String description){
+        var today=new java.util.Date();
+        System.out.println(today+" : "+description);
+    }
 }
 
 interface FlightEnabled {

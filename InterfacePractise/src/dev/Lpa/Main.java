@@ -8,6 +8,9 @@ public class Main {
         Animal animal=bird;
         FlightEnabled flier=bird;
         Trackable tracked=bird;
-
+        bird.move();
+        animal.move();
+//        flier.move();
+//        tracked.move();
     }
 }

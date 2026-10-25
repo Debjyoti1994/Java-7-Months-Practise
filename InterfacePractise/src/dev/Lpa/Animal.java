@@ -1,6 +1,8 @@
 package dev.Lpa;
 interface FlightEnabled{
-
+public abstract void takeOff();
+abstract void land();
+void fly();
 }
 interface Trackable{
 

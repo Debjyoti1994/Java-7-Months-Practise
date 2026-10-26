@@ -18,6 +18,8 @@ public class Main {
 //        flier.land();
         inFlight(flier);
         inFlight(new Jet());
+        Truck myTrck=new Truck();
+        myTrck.track();
 
     }
     private static void inFlight(FlightEnabled flier){

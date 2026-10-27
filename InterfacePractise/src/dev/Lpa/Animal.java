@@ -2,18 +2,18 @@ package dev.Lpa;
 
 import javax.sound.midi.Track;
 
-enum FlightStages implements Trackable{
-GROUNDED,LAUNCH,CRUISE,DATA_COLLECTION;
+enum FlightStages implements Trackable {
+    GROUNDED, LAUNCH, CRUISE, DATA_COLLECTION;
 
     @Override
     public void track() {
-        if(this!=GROUNDED){
-            System.out.println("Monitoring"+this);
+        if (this != GROUNDED) {
+            System.out.println("Monitoring" + this);
         }
     }
 }
 
-record DragonFly(String name,String type) implements FlightEnabled{
+record DragonFly(String name, String type) implements FlightEnabled {
 
     @Override
     public void takeOff() {
@@ -30,7 +30,8 @@ record DragonFly(String name,String type) implements FlightEnabled{
 
     }
 }
-class Satellite implements OrbitEarth,FlightEnabled{
+
+class Satellite implements OrbitEarth, FlightEnabled {
     public void achieveOrbit() {
         System.out.println("Orbit achieved!!");
     }
@@ -50,19 +51,32 @@ class Satellite implements OrbitEarth,FlightEnabled{
 
     }
 }
-interface OrbitEarth extends FlightEnabled{
+
+interface OrbitEarth extends FlightEnabled {
     void achieveOrbit();
 }
-interface FlightEnabled{
-    double MILES_TO_KM=1.60934;
-    double KM_TO_MILES=0.621371;
-abstract void takeOff();
-abstract void land();
-void fly();
+
+interface FlightEnabled {
+    double MILES_TO_KM = 1.60934;
+    double KM_TO_MILES = 0.621371;
+
+    abstract void takeOff();
+
+    abstract void land();
+
+    void fly();
+
+    default FlightStages transition(FlightStages stages){
+        System.out.println("transition not implemented "+getClass().getName());
+
+        return null;
+    };
 }
-interface Trackable{
-void track();
+
+interface Trackable {
+    void track();
 }
+
 public abstract class Animal {
-public abstract void move();
+    public abstract void move();
 }

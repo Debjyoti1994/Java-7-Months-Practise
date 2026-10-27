@@ -4,20 +4,26 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        DaysOfTheWeek[] myweek=DaysOfTheWeek.values();
-        for(DaysOfTheWeek my:DaysOfTheWeek.values()){
+        DaysOfTheWeek[] myweek = DaysOfTheWeek.values();
+        for (DaysOfTheWeek my : DaysOfTheWeek.values()) {
             System.out.println(my);
         }
         for (int i = 0; i < 10; i++) {
-            DaysOfTheWeek myweek1=myweek[returnDay()];
+            DaysOfTheWeek myweek1 = myweek[returnDay()];
+            int index = myweek1.ordinal();
+            System.out.println("Ordinal is :->" + index);
             System.out.println(myweek1.ordinal());
-            System.out.printf("Name is %s,Ordinal Vale =%d%n",myweek1.name(),myweek1.ordinal());
+            System.out.printf("Name is %s,Ordinal Vale =%d%n", myweek1.name(), myweek1.ordinal());
+            System.out.println("-X-".repeat(12));
         }
-       
+
+
     }
-    public static int returnDay(){
-        Random myrandom=new Random();
-        int newN0=myrandom.nextInt(7);
+
+    public static int returnDay() {
+        Random myrandom = new Random();
+        int newN0 = myrandom.nextInt(7);
         return newN0;
     }
+
 }

@@ -21,7 +21,7 @@ public class Jet implements  FlightEnabled,Trackable{
         System.out.println(getClass().getSimpleName()+"'s coordinates recorded");
 
     }
-
+//Overriding default interface concrete method
     @Override
     public FlightStages transition(FlightStages stage) {
         System.out.println(getClass().getSimpleName()+" transitioning");

@@ -17,14 +17,17 @@ public class Main {
 //            System.out.printf("Name is %s,Ordinal Vale =%d%n", myweek1.name(), myweek1.ordinal());
 //            System.out.println("-X-".repeat(12));
 //        }
-        for (int i = 0; i <10 ; i++) {
+
             DaysOfTheWeek myDay=myweek[returnDay()];
             System.out.println("Current Day :"+myDay);
-            DaysOfTheWeek nextDay=(DaysOfTheWeek) (myDay.getNextDay());
+            DaysOfTheWeek nextDay=getNextDay2(myDay);
             System.out.println("Next Day :"+nextDay);
             System.out.println("-X-".repeat(12));
-        }
 
+    }
+    public static DaysOfTheWeek getNextDay2(DaysOfTheWeek currentDay){
+        DaysOfTheWeek[] myWeek=DaysOfTheWeek.values();
+        return myWeek[(currentDay.ordinal()+1)% myWeek.length];
 
 
     }
@@ -34,6 +37,7 @@ public class Main {
         int newN0 = myrandom.nextInt(7);
         return newN0;
     }
+
 
 
 }

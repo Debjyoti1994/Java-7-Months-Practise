@@ -8,6 +8,7 @@ public class Main {
         for (DaysOfTheWeek my : DaysOfTheWeek.values()) {
             System.out.println(my);
         }
+        System.out.println("--".repeat(12));
 //        for (int i = 0; i < 10; i++) {
 //            DaysOfTheWeek myweek1 = myweek[returnDay()];
 //            int index = myweek1.ordinal();
@@ -16,6 +17,14 @@ public class Main {
 //            System.out.printf("Name is %s,Ordinal Vale =%d%n", myweek1.name(), myweek1.ordinal());
 //            System.out.println("-X-".repeat(12));
 //        }
+        for (int i = 0; i <10 ; i++) {
+            DaysOfTheWeek myDay=myweek[returnDay()];
+            System.out.println("Current Day :"+myDay);
+            DaysOfTheWeek nextDay=(DaysOfTheWeek) (myDay.getNextDay());
+            System.out.println("Next Day :"+nextDay);
+            System.out.println("-X-".repeat(12));
+        }
+
 
 
     }
@@ -25,8 +34,6 @@ public class Main {
         int newN0 = myrandom.nextInt(7);
         return newN0;
     }
-    public DaysOfTheWeek getNextDay(){
 
-    }
 
 }

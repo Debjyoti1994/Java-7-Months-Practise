@@ -18,11 +18,13 @@ public class Main {
 //            System.out.println("-X-".repeat(12));
 //        }
 
-            DaysOfTheWeek myDay=myweek[returnDay()];
-            System.out.println("Current Day :"+myDay);
-            DaysOfTheWeek nextDay=getNextDay2(myDay);
-            System.out.println("Next Day :"+nextDay);
-            System.out.println("-X-".repeat(12));
+//            DaysOfTheWeek myDay=myweek[returnDay()];
+//            System.out.println("Current Day :"+myDay);
+//            DaysOfTheWeek nextDay=getNextDay2(myDay);
+//            System.out.println("Next Day :"+nextDay);
+//            System.out.println("-X-".repeat(12));
+        Plan newPlan=new Plan();
+        newPlan.nextDaySchedule(DaysOfTheWeek.MONDAY);
 
     }
     public static DaysOfTheWeek getNextDay2(DaysOfTheWeek currentDay){

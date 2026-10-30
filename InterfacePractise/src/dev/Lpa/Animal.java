@@ -1,5 +1,7 @@
 package dev.Lpa;
 
+import jdk.jfr.StackTrace;
+
 import javax.sound.midi.Track;
 
 enum FlightStages implements Trackable {
@@ -36,24 +38,32 @@ record DragonFly(String name, String type) implements FlightEnabled {
 }
 
 class Satellite implements OrbitEarth, FlightEnabled {
+    FlightStages stage=FlightStages.GROUNDED;
     public void achieveOrbit() {
-        System.out.println("Orbit achieved!!");
+        transition("Orbit achieved!!");
     }
 
     @Override
     public void takeOff() {
-
+    transition("Taking Off!");
     }
 
     @Override
     public void land() {
-
+        transition("Landing");
     }
 
     @Override
     public void fly() {
-
+        achieveOrbit();
+        transition("Data Collection while Orbiting");
     }
+    public void transition(String description){
+        System.out.println(description);
+        stage=transition(stage);
+        stage.track();
+    }
+
 }
 
 interface OrbitEarth extends FlightEnabled {

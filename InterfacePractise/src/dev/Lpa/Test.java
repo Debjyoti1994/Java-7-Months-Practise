@@ -4,6 +4,7 @@ public class Test {
     public static void main(String[] args) {
     inFlight(new Jet());
     OrbitEarth.log("testing "+new Satellite());
+    //Date and time its showing long format
     }
     private static void inFlight(FlightEnabled flier){
         flier.takeOff();

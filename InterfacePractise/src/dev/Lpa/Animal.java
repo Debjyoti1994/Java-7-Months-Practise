@@ -13,9 +13,10 @@ enum FlightStages implements Trackable {
             System.out.println("Monitoring" + this);
         }
     }
-    public FlightStages getNextStage(){
-        FlightStages[] allStages=values();
-        return allStages[(ordinal()+1)%allStages.length];
+
+    public FlightStages getNextStage() {
+        FlightStages[] allStages = values();
+        return allStages[(ordinal() + 1) % allStages.length];
     }
 }
 
@@ -38,14 +39,15 @@ record DragonFly(String name, String type) implements FlightEnabled {
 }
 
 class Satellite implements OrbitEarth, FlightEnabled {
-    FlightStages stage=FlightStages.GROUNDED;
+    FlightStages stage = FlightStages.GROUNDED;
+
     public void achieveOrbit() {
         transition("Orbit achieved!!");
     }
 
     @Override
     public void takeOff() {
-    transition("Taking Off!");
+        transition("Taking Off!");
     }
 
     @Override
@@ -58,9 +60,10 @@ class Satellite implements OrbitEarth, FlightEnabled {
         achieveOrbit();
         transition("Data Collection while Orbiting");
     }
-    public void transition(String description){
+
+    public void transition(String description) {
         System.out.println(description);
-        stage=transition(stage);
+        stage = transition(stage);
         stage.track();
     }
 
@@ -68,19 +71,21 @@ class Satellite implements OrbitEarth, FlightEnabled {
 
 interface OrbitEarth extends FlightEnabled {
     void achieveOrbit();
-   private static void log(String description){
-        var today=new java.util.Date();
-        System.out.println(today+": "+description);
+
+    private static void log(String description) {
+        var today = new java.util.Date();
+        System.out.println(today + ": " + description);
     }
-    private void logStage(FlightStages stage,String description){
-       description=stage+": "+description;
-       log(description);
+
+    private void logStage(FlightStages stage, String description) {
+        description = stage + ": " + description;
+        log(description);
     }
 
     @Override
     default FlightStages transition(FlightStages stage) {
-        FlightStages nextStage =FlightEnabled.super.transition(stage);
-        logStage(stage,"Begining Transition to "+nextStage);
+        FlightStages nextStage = FlightEnabled.super.transition(stage);
+        logStage(stage, "Begining Transition to " + nextStage);
         return nextStage;
     }
 }
@@ -95,14 +100,16 @@ interface FlightEnabled {
 
     void fly();
 
-    default FlightStages transition(FlightStages stages){
+    default FlightStages transition(FlightStages stages) {
 //        System.out.println("transition not implemented "+getClass().getName());
 //
 //        return null;
-        FlightStages nextStage=stages.getNextStage();
-        System.out.println("Transitioning from "+stages+" to "+nextStage);
+        FlightStages nextStage = stages.getNextStage();
+        System.out.println("Transitioning from " + stages + " to " + nextStage);
         return nextStage;
-    };
+    }
+
+    ;
 }
 
 interface Trackable {

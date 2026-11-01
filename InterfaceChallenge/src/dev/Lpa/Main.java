@@ -7,7 +7,8 @@ public class Main {
          Building mybuilding=new Building(new label("Post Office","Govt Services"),new iconType("green star"));
          mybuilding.returnLabel();
          mybuilding.toJSON();
-         UtiltyLine myutilty=new UtiltyLine(new label("College St"))
+         UtiltyLine myutilty=new UtiltyLine(new label("College St","FIBER_OPTIC"),new iconType("GREEN DOTTED"));
+         myutilty.toJSON();
 
     }
 }

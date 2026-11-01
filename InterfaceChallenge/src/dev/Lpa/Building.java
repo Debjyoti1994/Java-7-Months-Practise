@@ -1,6 +1,6 @@
 package dev.Lpa;
 
-public class Building implements Mappable{
+public class Building implements Mappable {
     private label myLabel;
     private geometryType mygeometry;
     private iconType myicon;
@@ -14,9 +14,9 @@ public class Building implements Mappable{
     @Override
     public label returnLabel() {
 
-        String textblock= """
+        String textblock = """
                 "properties": { "name": "%s", "usage": "%s"}
-                """.formatted(myLabel.name(),myLabel.usage());
+                """.formatted(myLabel.name(), myLabel.usage());
         System.out.println(textblock);
 
         return myLabel;
@@ -29,17 +29,15 @@ public class Building implements Mappable{
     }
 
     @Override
-    public iconType returnIconType()
-    {
+    public iconType returnIconType() {
         return myicon;
     }
 
     @Override
     public void toJSON() {
-        String mytext= """
-               "properties": {"type:"PONT", "label":"%s(%s)", "marker":"%s", "name":"%s", "usage":"%s"}
-                
-               """.formatted(myLabel.name(),myLabel.usage(),myicon.marker(),myLabel.name(),myLabel.usage());
+        String mytext = """
+                "properties": {"type:"POINT", "label":"%s(%s)", "marker":"%s", "name":"%s", "usage":"%s"}""".
+                formatted(myLabel.name(), myLabel.usage(), myicon.marker(), myLabel.name(), myLabel.usage());
         System.out.println(mytext);
     }
 }

@@ -11,12 +11,13 @@ public class Building implements Mappable {
         this.myicon = myicon;
     }
 
+
+
     @Override
     public label returnLabel() {
 
-        String textblock = """
-                "properties": { "name": "%s", "usage": "%s"}
-                """.formatted(myLabel.name(), myLabel.usage());
+        String textblock = """ 
+                "properties": { "name": "%s", "usage": "%s"} """.formatted(myLabel.name(), myLabel.usage());
         System.out.println(textblock);
 
         return myLabel;

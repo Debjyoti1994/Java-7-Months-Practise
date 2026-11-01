@@ -5,10 +5,12 @@ public class Main {
         label mylabel=new label("White house","Govt Building");
 //        System.out.printf(mylabel.toString());
          Building mybuilding=new Building(new label("Post Office","Govt Services"),new iconType("green star"));
-         mybuilding.returnLabel();
-         mybuilding.toJSON();
+//         mybuilding.returnLabel();
+//         mybuilding.toJSON();
          UtiltyLine myutilty=new UtiltyLine(new label("College St","FIBER_OPTIC"),new iconType("GREEN DOTTED"));
-         myutilty.toJSON();
+//         myutilty.toJSON();
+         Mappable.Map(mybuilding);
+         Mappable.Map(myutilty);
 
     }
 }

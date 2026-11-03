@@ -1,5 +1,5 @@
 package dev.Lpa;
-record BaseballPlayer(String name,String player){
+record BaseballPlayer(String name,String position){
 
 }
 public class Main {

@@ -13,22 +13,22 @@ public class BaseballTeam {
     public BaseballTeam(String teamName) {
         this.teamName = teamName;
     }
-
+    ///Adding player to the list if player(BaseballPlayer) is not present in the list
     public void addTeamMember(BaseballPlayer player) {
         if (!teamMembers.contains(player)) {
             teamMembers.add(player);
         }
     }
-
+//Printing out all elements on this list
     public void listTeamMembers() {
         System.out.println(teamName + " Roster:");
         System.out.println(teamMembers);
     }
-
+//Assingning points
     public int ranking() {
         return (totalLosses * 2) + totalTies + 1;
     }
-
+//Checkiing score no wins,losses and ties
     public String setScore(int ourScore, int theirScore) {
         String message = "lost to";
         if (ourScore > theirScore) {

@@ -17,13 +17,19 @@ public class Main {
 
 
    //ADDING TEAM MEMBERS
-//creatng entries in record
+//creatng entries in record BaseballPLayer
        var harper=new BaseballPlayer("B Harper","Right Fielder");
         var marsh=new BaseballPlayer("B Marsh","Right Fielder");
         phillies.addTeamMember(harper);
         phillies.addTeamMember(marsh);
         //printing the list teamMembers
         phillies.listTeamMembers();
+
+        //Creating new sports Team
+        SportsTeam afc=new SportsTeam("Adelaide Crows");
+        var tex=new FootballPlayer("Tex Walker","Center half forward");
+        afc.addTeamMember(tex);
+        afc.listTeamMembers();
 
     }
    public static void scoreResult(BaseballTeam team1,int t1_score,

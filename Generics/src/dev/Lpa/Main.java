@@ -9,7 +9,7 @@ public class Main {
         BaseballTeam phillies1=new BaseballTeam("Philadelphia Phillis");
         BaseballTeam astros1=new BaseballTeam("Houston Astros");
    scoreResult(phillies1,3,astros1,5);
-
+//Sports Team
    SportsTeam phillies =new SportsTeam("Philadelphia Phillis");
         SportsTeam astros=new SportsTeam("Houston Astros");
         scoreResult(phillies,3,astros,5);

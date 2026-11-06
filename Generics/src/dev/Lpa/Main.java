@@ -31,6 +31,11 @@ public class Main {
         afc.addTeamMember(tex);
         afc.listTeamMembers();
 
+        //Problem with thi solution we can add a baseball player to footbball player team
+        var Guthrie=new BaseballPlayer("D Guthrie","Center Fielder");
+        afc.addTeamMember(Guthrie);
+        afc.listTeamMembers();
+
     }
    public static void scoreResult(BaseballTeam team1,int t1_score,
                                   BaseballTeam team2,int t2_score){

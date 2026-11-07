@@ -1,12 +1,15 @@
 package dev.Lpa;
 
 interface Player {
+    String name();
 }
 
 record BaseballPlayer(String name, String position) implements Player {
 }
 
 record FootballPlayer(String name, String position) implements Player {
+}
+record VolleyballPlayer(String name, String position) implements Player {
 }
 
 public class Main {
@@ -53,14 +56,16 @@ public class Main {
         afc.addTeamMember(rory);
         afc.listTeamMembers();
 //Team of generic type String
-        Team<String>adelaide=new Team<>("Adelaide Storm");
+        Team<VolleyballPlayer>adelaide=new Team<>("Adelaide Storm");
         adelaide.addTeamMember("N Roberts");
         adelaide.listTeamMembers();
-
+//Another Team of generic type String
         var canbera=new Team<String>("Canberra Heat");
         canbera.addTeamMember("B Black");
         canbera.listTeamMembers();
+//Comparing both teams
         scoreResult(canbera,0,adelaide,1);
+//        Team<Integer>melbourneVB=new Team<>("Melborne Vipers");
 
 
     }

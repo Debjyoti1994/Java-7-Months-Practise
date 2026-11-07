@@ -3,7 +3,7 @@ package dev.Lpa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team <T>{
+public class Team <T extends Player>{
     private String teamName;
     private List<T> teamMembers = new ArrayList<>();
     private int totalWins = 0;
@@ -22,7 +22,9 @@ public class Team <T>{
 //Printing out all elements on this list
     public void listTeamMembers() {
         System.out.println(teamName + " Roster:");
-        System.out.println(teamMembers);
+        for (T t:teamMembers){
+            System.out.println(t.name());
+        }
     }
 //Assingning points
     public int ranking() {

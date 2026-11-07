@@ -14,7 +14,7 @@ record VolleyballPlayer(String name, String position) implements Player {
 
 public class Main {
     public static void main(String[] args) {
-
+    var philly=new Affiliation("city","Philadelphia,PA","US");
         BaseballTeam phillies1 = new BaseballTeam("Philadelphia Phillis");
         BaseballTeam astros1 = new BaseballTeam("Houston Astros");
         scoreResult(phillies1, 3, astros1, 5);
@@ -24,7 +24,7 @@ public class Main {
         scoreResult(phillies2, 3, astros2, 5);
 
         //using generic class Team with BaseballPlayer record
-        Team<BaseballPlayer,Affiliation> phillies = new Team<>("Philadelphia Phillis");
+        Team<BaseballPlayer,Affiliation> phillies = new Team<>("Philadelphia Phillis",philly);
         Team<BaseballPlayer,Affiliation> astros = new Team<>("Houston Astros");
         scoreResult(phillies, 3, astros, 5);
 
@@ -42,7 +42,7 @@ public class Main {
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
 
 //using generic class Team with FootballPlayer record
-        Team<FootballPlayer,Affiliation> afc = new Team<>("Adelaide Crows");
+        Team<FootballPlayer,String> afc = new Team<>("Adelaide Crows","City of Adelaide,South Australia,in Au");
 
         var tex = new FootballPlayer("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);

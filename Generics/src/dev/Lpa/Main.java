@@ -14,6 +14,7 @@ record VolleyballPlayer(String name, String position) implements Player {
 
 public class Main {
     public static void main(String[] args) {
+
         BaseballTeam phillies1 = new BaseballTeam("Philadelphia Phillis");
         BaseballTeam astros1 = new BaseballTeam("Houston Astros");
         scoreResult(phillies1, 3, astros1, 5);
@@ -23,8 +24,8 @@ public class Main {
         scoreResult(phillies2, 3, astros2, 5);
 
         //using generic class Team with BaseballPlayer record
-        Team<BaseballPlayer> phillies = new Team<>("Philadelphia Phillis");
-        Team<BaseballPlayer> astros = new Team<>("Houston Astros");
+        Team<BaseballPlayer,Affiliation> phillies = new Team<>("Philadelphia Phillis");
+        Team<BaseballPlayer,Affiliation> astros = new Team<>("Houston Astros");
         scoreResult(phillies, 3, astros, 5);
 
         //ADDING TEAM MEMBERS
@@ -41,7 +42,7 @@ public class Main {
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
 
 //using generic class Team with FootballPlayer record
-        Team<FootballPlayer> afc = new Team<>("Adelaide Crows");
+        Team<FootballPlayer,Affiliation> afc = new Team<>("Adelaide Crows");
 
         var tex = new FootballPlayer("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);
@@ -56,12 +57,13 @@ public class Main {
         afc.addTeamMember(rory);
         afc.listTeamMembers();
 //Team of generic type String
-        Team<VolleyballPlayer>adelaide=new Team<>("Adelaide Storm");
-        adelaide.addTeamMember("N Roberts");
+//Using Volleyball Player instead of String
+        Team<VolleyballPlayer,Affiliation>adelaide=new Team<>("Adelaide Storm");
+        adelaide.addTeamMember(new VolleyballPlayer("N Roberts","Setter"));
         adelaide.listTeamMembers();
 //Another Team of generic type String
-        var canbera=new Team<String>("Canberra Heat");
-        canbera.addTeamMember("B Black");
+        var canbera=new Team<VolleyballPlayer,Affiliation>("Canberra Heat");
+        canbera.addTeamMember(new VolleyballPlayer("B Black","Opposite"));
         canbera.listTeamMembers();
 //Comparing both teams
         scoreResult(canbera,0,adelaide,1);

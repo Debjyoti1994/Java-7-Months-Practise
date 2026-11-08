@@ -24,6 +24,7 @@ public class Main {
         scoreResult(phillies2, 3, astros2, 5);
 
         //using generic class Team with BaseballPlayer record
+        //Affiliation doesn't extends upper bound thats why we can pass even string
         Team<BaseballPlayer,Affiliation> phillies = new Team<>("Philadelphia Phillis",philly);
         Team<BaseballPlayer,Affiliation> astros = new Team<>("Houston Astros");
         scoreResult(phillies, 3, astros, 5);

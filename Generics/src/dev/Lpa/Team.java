@@ -15,15 +15,15 @@ public class Team <T extends Player,S>{
     private int totalWins = 0;
     private int totalLosses = 0;
     private int totalTies = 0;
-    private S Affiliation;
+    private S affiliation;
 
     public Team(String teamName) {
         this.teamName = teamName;
     }
 
-    public Team(String teamName, S Affiliation) {
+    public Team(String teamName, S affiliation) {
         this.teamName = teamName;
-        this.Affiliation = Affiliation;
+        this.affiliation = affiliation;
     }
 
     ///Adding T to the list if T(T) is not present in the list
@@ -35,7 +35,7 @@ public class Team <T extends Player,S>{
 //Printing out all elements on this list
     public void listTeamMembers() {
         System.out.print(teamName + " Roster:");
-        System.out.println((Affiliation ==null?"":"AFFILIATION: "+ Affiliation));
+        System.out.println((affiliation ==null?"":"AFFILIATION: "+ affiliation));
         for (T t:teamMembers){
             System.out.println(t.name());
         }

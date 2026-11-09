@@ -5,4 +5,9 @@ public class Line implements Mappable{
     public String render() {
         return "";
     }
+
+    @Override
+    public String toString() {
+        return "Line{}";
+    }
 }

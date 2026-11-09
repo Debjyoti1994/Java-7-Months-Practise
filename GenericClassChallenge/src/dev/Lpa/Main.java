@@ -14,7 +14,12 @@ missipi.addlocation(47.2160, -95.2348);
 missipi.addlocation(35.1556, -90.0659);
 missipi.addlocation(29.1566, -89.2495);
 System.out.println(missipi.render());
-
-
-    }
+//        System.out.println(missipi.printGoogleLcation(missipi.getGoogleLocation()));
+        Layer <Mappable>parkLayer=new Layer<>();
+        parkLayer.addElements(missipi);
+        parkLayer.renderLayer();
+        parkLayer.addElements(Yellowstone);
+        parkLayer.renderLayer();
+//
+}
 }

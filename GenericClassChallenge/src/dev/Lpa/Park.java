@@ -50,4 +50,28 @@ public class Park extends Point{
                 ", googleLocation=" + Arrays.toString(googleLocation) +
                 "} " + super.toString();
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setGoogleLocation(double[][] googleLocation) {
+        this.googleLocation = googleLocation;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public double[][] getGoogleLocation() {
+        return googleLocation;
+    }
 }

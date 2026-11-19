@@ -22,6 +22,15 @@ BaseballTeam astros1=new BaseballTeam("Houston Astros1");
     phillies.addTeamMember(harper);
     phillies.addTeamMember(marsh);
     phillies.listTeamMembers();
+//Creating a sports team and adding a Football PLayer
+    SportsTeam  afc=new SportsTeam("Adelaide Crows");
+    var tex=new FootballPlayer("Tex Walker","Center half forward");
+    afc.addTeamMember(tex);
+    //We can add BASEBALL & FOOTBALL player n SPORTS TEAM(AFC-football team)
+    var gutherie=new BaseballPlayer("D Guthrie","Center Fielder");
+    afc.addTeamMember(gutherie);
+    afc.listTeamMembers();
+
     }
 //Comparing score via set scoreMethod
     public static void scoreResult(BaseballTeam team1,int t1_score,BaseballTeam team2,int t2_score){

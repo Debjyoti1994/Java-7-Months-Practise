@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SportsTeam {
     private String teamName;
-    private List<BaseballPlayer> teamMember = new ArrayList<>();
+    private List<Player> teamMember = new ArrayList<>();
     private int totalWin = 0;
     private int totalLoss = 0;
     private int totalTies = 0;
@@ -15,7 +15,7 @@ public class SportsTeam {
         this.teamName = teamName;
     }
     //adding Team Members
-    public void addTeamMember(BaseballPlayer player){
+    public void addTeamMember(Player player){
         if (!teamMember.contains(player)){
             teamMember.add(player);
         }

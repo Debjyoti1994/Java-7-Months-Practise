@@ -1,12 +1,16 @@
 package dev.Lpa;
 
 interface Player {
+    String name();
 }
 
 record BaseballPlayer(String name, String position) implements Player {
 }
 
 record FootballPlayer(String name, String position) implements Player {
+}
+
+record VolleyballPlayer(String name, String position) implements Player {
 }
 
 public class Main {
@@ -41,9 +45,22 @@ public class Main {
         //We can add BASEBALL & FOOTBALL player n SPORTS TEAM(AFC-football team)
 //        var gutherie1 = new BaseballPlayer("D Guthrie", "Center Fielder");
 //        afc1.addTeamMember(gutherie1);
-        var rory=new FootballPlayer("Rory Lard","Midfeld");
+//        Team<Integer>myteam=new Team<>("Romie");
+//        myteam.addTeamMember(24);
+//        myteam.listTeamMembers();
+        var rory = new FootballPlayer("Rory Lard", "Midfeld");
         afc.addTeamMember(rory);
         afc.listTeamMembers();
+        Team<VolleyballPlayer> adelaide = new Team<>("Adelaide Storm");
+        adelaide.addTeamMember(new VolleyballPlayer("N Roerts","Setter"));
+
+        adelaide.listTeamMembers();
+
+        var canbera = new Team<VolleyballPlayer>("Canbera Heat");
+        canbera.addTeamMember(new VolleyballPlayer("B Black","Opposite"));
+
+        canbera.listTeamMembers();
+        scoreResult(canbera, 0, adelaide, 1);
 
     }
 

@@ -2,14 +2,25 @@ package dev.Lpa;
 
 import java.util.ArrayList;
 import java.util.List;
+record Affiliation(String name, String type, String countryCode){
+    @Override
+    public String toString() {
+        return name+ " ("+type+" in "+countryCode+")";
+    }
+}
 
-public class Team<T> {
+public class Team<T extends Player,S> {
     private String teamName;
     private List<T> teamMember = new ArrayList<>();
     private int totalWin = 0;
     private int totalLoss = 0;
     private int totalTies = 0;
+    private S affiliation;
 
+    public Team(String teamName, S affiliation) {
+        this.teamName = teamName;
+        this.affiliation = affiliation;
+    }
 
     public Team(String teamName) {
         this.teamName = teamName;
@@ -22,8 +33,11 @@ public class Team<T> {
     }
     //Printing out team Members
     public void listTeamMembers(){
-        System.out.println(teamName+" Roster:");
-        System.out.println(teamMember);
+        System.out.print(teamName+" Roster:");
+        System.out.println((affiliation==null)?"":"AFFILIATON: "+affiliation);
+        for (T t:teamMember){
+            System.out.println(t.name());
+        }
     }
     //Calculating Ranking of team;
     public int ranking(){

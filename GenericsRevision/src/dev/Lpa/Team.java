@@ -3,9 +3,9 @@ package dev.Lpa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team {
+public class Team<T> {
     private String teamName;
-    private List<Player> teamMember = new ArrayList<>();
+    private List<T> teamMember = new ArrayList<>();
     private int totalWin = 0;
     private int totalLoss = 0;
     private int totalTies = 0;
@@ -15,9 +15,9 @@ public class Team {
         this.teamName = teamName;
     }
     //adding Team Members
-    public void addTeamMember(Player player){
-        if (!teamMember.contains(player)){
-            teamMember.add(player);
+    public void addTeamMember(T t){
+        if (!teamMember.contains(t)){
+            teamMember.add(t);
         }
     }
     //Printing out team Members

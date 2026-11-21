@@ -15,6 +15,7 @@ record VolleyballPlayer(String name, String position) implements Player {
 
 public class Main {
     public static void main(String[] args) {
+        var philly=new Affiliation("city","Philadelpia,PA","US");
         //creating new baseball Team
         BaseballTeam phillies1 = new BaseballTeam("Philadephia Phillies1");
         BaseballTeam astros1 = new BaseballTeam("Houston Astros1");
@@ -25,8 +26,8 @@ public class Main {
         SportsTeam astros2 = new SportsTeam("Houston Astro2");
         scoreResult(phillies2, 3, astros2, 5);
 
-        Team<BaseballPlayer> phillies = new Team<>("Philadephia Phillies");
-        Team<BaseballPlayer> astros = new Team<>("Houston Astros");
+        Team<BaseballPlayer,Affiliation> phillies = new Team<>("Philadephia Phillies",philly);
+        Team<BaseballPlayer,Affiliation> astros = new Team<>("Houston Astros");
         scoreResult(phillies, 3, astros, 5);
 
         //adding players
@@ -39,7 +40,7 @@ public class Main {
         phillies.listTeamMembers();
 //Creating a sports team and adding a Football PLayer
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
-        Team<FootballPlayer> afc = new Team<>("Adelaide Crows");
+        Team<FootballPlayer,String> afc = new Team<>("Adelaide Crows","City of Adelaide,South Australia, in AU");
         var tex = new FootballPlayer("Tex Walker", "Center half forward");
         afc.addTeamMember(tex);
         //We can add BASEBALL & FOOTBALL player n SPORTS TEAM(AFC-football team)
@@ -51,12 +52,12 @@ public class Main {
         var rory = new FootballPlayer("Rory Lard", "Midfeld");
         afc.addTeamMember(rory);
         afc.listTeamMembers();
-        Team<VolleyballPlayer> adelaide = new Team<>("Adelaide Storm");
+        Team<VolleyballPlayer,Affiliation> adelaide = new Team<>("Adelaide Storm");
         adelaide.addTeamMember(new VolleyballPlayer("N Roerts","Setter"));
 
         adelaide.listTeamMembers();
 
-        var canbera = new Team<VolleyballPlayer>("Canbera Heat");
+        var canbera = new Team<VolleyballPlayer,Affiliation>("Canbera Heat");
         canbera.addTeamMember(new VolleyballPlayer("B Black","Opposite"));
 
         canbera.listTeamMembers();

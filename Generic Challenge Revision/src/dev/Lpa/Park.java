@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Park extends Point{
-    private String name;
+    private final String name;
     private double latitude;
     private double  longitude;
 double[]GoggleLocaion;
@@ -18,6 +18,6 @@ double[]GoggleLocaion;
 
     @Override
     public void render() {
-        System.out.println("Render "+name+" as POINT"+ Arrays.toString(GoggleLocaion));
+        System.out.println("Render "+name+" PARK as POINT"+ Arrays.toString(GoggleLocaion));
     }
 }

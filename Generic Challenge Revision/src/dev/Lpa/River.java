@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class River extends Line{
-    private String name;
+    private final String name;
     private double latitude;
     private double  longitude;
 List<List<Double>>GoggleLocaion=new ArrayList<>();

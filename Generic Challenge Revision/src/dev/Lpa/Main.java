@@ -11,6 +11,13 @@ public class Main {
         mississippiRiver.addMoreRiverCordinates(29.1566, -89.2495
         );
         mississippiRiver.render();
+        System.out.println("--".repeat(23));
+       Layer<Mappable>mylist=new Layer();
+       mylist.addMembers(grandCanyon);
+       mylist.addMembers(new Park("Yellow Stone",44.4882, -110.5916));
+       mylist.addMembers(mississippiRiver);
+        mylist.renderLayer();
+
 
     }
 }

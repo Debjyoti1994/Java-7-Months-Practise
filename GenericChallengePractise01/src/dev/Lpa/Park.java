@@ -12,8 +12,9 @@ public class Park extends Point{
         this.name = name;
     }
 
+
     @Override
     public void render() {
-        System.out.printf("RENDER %s PARK as %s (%s)",name,"POINT", Arrays.toString(location));
+        System.out.printf("RENDER %s PARK as %s (%s)%n",name,"POINT",location());
     }
 }

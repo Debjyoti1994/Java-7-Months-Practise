@@ -1,9 +1,11 @@
 package dev.Lpa;
 
+import java.util.Arrays;
+
 public abstract class Point implements Mappable {
     double[] location;
-    private String location(){
-        return "";
+    String location(){
+        return Arrays.toString(location);
     };
 
     public Point(double[] location) {

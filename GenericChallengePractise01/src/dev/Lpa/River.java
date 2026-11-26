@@ -7,4 +7,9 @@ public class River extends Line{
         super(location);
         this.name = name;
     }
+
+    @Override
+    public void render() {
+        System.out.printf("RENDER %s Line as %s (%s)%n",name,"POINT",location());
+    }
 }

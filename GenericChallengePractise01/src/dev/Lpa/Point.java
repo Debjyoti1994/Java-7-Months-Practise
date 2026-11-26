@@ -6,6 +6,10 @@ public abstract class Point implements Mappable {
         return "";
     };
 
+    public Point(double[] location) {
+        this.location = location;
+    }
+
     @Override
     public void render() {
 

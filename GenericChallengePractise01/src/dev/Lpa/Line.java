@@ -6,6 +6,10 @@ public abstract class Line implements Mappable {
         return "";
     };
 
+    public Line(double[][] location) {
+        this.location = location;
+    }
+
     @Override
     public void render() {
 

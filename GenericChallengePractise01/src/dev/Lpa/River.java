@@ -10,6 +10,6 @@ public class River extends Line{
 
     @Override
     public void render() {
-        System.out.printf("RENDER %s Line as %s (%s)%n",name,"POINT",location());
+        System.out.printf("RENDER %s River as %s (%s)%n",name,"LINE",location());
     }
 }

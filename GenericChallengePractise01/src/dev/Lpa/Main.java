@@ -8,10 +8,13 @@ public class Main {
                 {47.2160, -95.2348},
                 {35.1556, -90.0659},
                 {47.2160, -95.2348},
-                {35.1556, -90.0659},
                 {29.1566, -89.2495},
         });
         myRiver.render();
+        Layer<Mappable>myList=new Layer<>();
+        myList.addElements(myRiver);
+        myList.addElements(mypark);
+        myList.renderLayer();
 
     }
 

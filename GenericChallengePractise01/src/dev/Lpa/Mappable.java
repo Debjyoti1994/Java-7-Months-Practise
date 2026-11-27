@@ -2,14 +2,19 @@ package dev.Lpa;
 
 public interface Mappable {
      void render();
-     static double[] stringToLatLon(String text1) {
-          String[] myarray = text1.split(",");
-          double[] googleLocation = new double[myarray.length];
-          for (int i = 0; i < myarray.length; i++) {
-               googleLocation[i] = Double.parseDouble(myarray[i]);
+     static double[] stringToLatLon(String location) {
+          //for loop not redundant as only to elements in the String array
+          var splits = location.split(",");
+          double lat=Double.parseDouble(splits[0]);
+          double lng=Double.parseDouble(splits[1]);
+          return new double[]{lat,lng};
 
-          }
-          return googleLocation;
+//          double[] googleLocation = new double[myarray.length];
+//          for (int i = 0; i < splits.length; i++) {
+//               googleLocation[i] = Double.parseDouble(splits[i].trim());
+//
+//          }
+//          return googleLocation;
      }
 
 
